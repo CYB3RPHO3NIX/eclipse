@@ -12,7 +12,7 @@ description:
 
 # GitHub Copilot Instructions & Best Practices
 
-> A practical, actionable guide for developing **a large, production-ready CSS framework** (components, icons, docs site, demo pages, dark theme) modeled visually after GitHub's old theme. Includes dev workflow, naming conventions, accessibility, performance, packaging, and how to prompt GitHub Copilot for maximum productivity.
+> A practical, actionable guide for developing **a large, production-ready CSS framework** (components, icons, docs site, demo pages, dark theme) modeled visually after Windows XP theme. Includes dev workflow, naming conventions, accessibility, performance, packaging, and how to prompt GitHub Copilot for maximum productivity.
 
 ---
 
