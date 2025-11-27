@@ -23,7 +23,6 @@ body {
 
 h1 {
     /* Windows XP window title bar style */
-    background: linear-gradient(to bottom, #0a246a 0%, #0a246a 3%, #a6caf0 3%, #a6caf0 5%, #0a246a 5%, #0a246a 100%);
     background: linear-gradient(180deg, 
         #0058e6 0%, 
         #3a93ff 8%, 
