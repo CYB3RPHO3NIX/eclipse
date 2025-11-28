@@ -616,37 +616,6 @@
                     </div>
                 </div>
                 
-                <div class="component-card">
-                    <h3>Search Icons</h3>
-                    <div class="component-preview">
-                        <div class="form-group">
-                            <input type="text" id="icon-search" class="textbox" placeholder="Search icons..." style="width: 300px;">
-                        </div>
-                        <div class="form-group">
-                            <label class="radio-wrapper">
-                                <input type="radio" name="icon-type" value="all" checked>
-                                <span class="radio"></span>
-                                <span class="radio-label">All (2020)</span>
-                            </label>
-                            <label class="radio-wrapper">
-                                <input type="radio" name="icon-type" value="solid">
-                                <span class="radio"></span>
-                                <span class="radio-label">Solid (1390)</span>
-                            </label>
-                            <label class="radio-wrapper">
-                                <input type="radio" name="icon-type" value="regular">
-                                <span class="radio"></span>
-                                <span class="radio-label">Regular (163)</span>
-                            </label>
-                            <label class="radio-wrapper">
-                                <input type="radio" name="icon-type" value="brands">
-                                <span class="radio"></span>
-                                <span class="radio-label">Brands (467)</span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                
                 <div class="component-card" id="solid-icons-card">
                     <h3>Solid Icons (1390)</h3>
                     <div class="component-preview icon-grid-preview">
@@ -8791,39 +8760,6 @@
             });
         });
         
-        // Icon search and filter functionality
-        const iconSearch = document.getElementById('icon-search');
-        const iconTypeRadios = document.querySelectorAll('input[name="icon-type"]');
-        
-        function filterIcons() {
-            const searchTerm = iconSearch ? iconSearch.value.toLowerCase() : '';
-            const selectedType = document.querySelector('input[name="icon-type"]:checked');
-            const typeFilter = selectedType ? selectedType.value : 'all';
-            
-            // Show/hide icon type cards
-            const solidCard = document.getElementById('solid-icons-card');
-            const regularCard = document.getElementById('regular-icons-card');
-            const brandsCard = document.getElementById('brands-icons-card');
-            
-            if (solidCard) solidCard.style.display = (typeFilter === 'all' || typeFilter === 'solid') ? 'block' : 'none';
-            if (regularCard) regularCard.style.display = (typeFilter === 'all' || typeFilter === 'regular') ? 'block' : 'none';
-            if (brandsCard) brandsCard.style.display = (typeFilter === 'all' || typeFilter === 'brands') ? 'block' : 'none';
-            
-            // Filter individual icons by search term
-            document.querySelectorAll('.icon-grid-item').forEach(item => {
-                const iconName = item.dataset.iconName || '';
-                const matchesSearch = iconName.toLowerCase().includes(searchTerm);
-                item.classList.toggle('hidden', !matchesSearch);
-            });
-        }
-        
-        if (iconSearch) {
-            iconSearch.addEventListener('input', filterIcons);
-        }
-        
-        iconTypeRadios.forEach(radio => {
-            radio.addEventListener('change', filterIcons);
-        });
     </script>
 </body>
 </html>
