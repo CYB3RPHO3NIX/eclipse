@@ -463,7 +463,7 @@ h2 {
 
 .form-section:last-child {
     border-bottom: 1px solid #0054e3;
-    border-radius: 0 0 0 0;
+    border-radius: 0;
 }
 
 /* Form group for labels and controls */
