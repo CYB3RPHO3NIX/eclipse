@@ -1017,10 +1017,6 @@ h2 {
     background: #f0f4f8;
 }
 
-.icon-grid-item.hidden {
-    display: none;
-}
-
 .icon-grid-item span[class^="icon-"],
 .icon-grid-item span[class*=" icon-"] {
     color: #333;
