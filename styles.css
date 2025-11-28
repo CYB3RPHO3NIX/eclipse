@@ -1,4 +1,4 @@
-/* Eclipse Button Styles - Windows XP Theme */
+/* Eclipse Framework - Modern UI Component Library */
 
 * {
     margin: 0;
@@ -7,41 +7,214 @@
 }
 
 body {
-    font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
-    /* Windows XP classic "Bliss" desktop blue */
-    background: linear-gradient(to bottom, #245edc 0%, #3a6ea5 100%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #1a1a2e;
     min-height: 100vh;
-    color: #000;
-    line-height: 1.4;
+    color: #e0e0e0;
+    line-height: 1.6;
 }
 
+/* ============================================
+   Main Header
+   ============================================ */
+
+.main-header {
+    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+    padding: 20px 30px;
+    border-bottom: 1px solid #0f3460;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.main-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #e94560;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    margin: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    text-shadow: none;
+}
+
+/* ============================================
+   App Layout - Side Menu + Content Panel
+   ============================================ */
+
+.app-layout {
+    display: flex;
+    margin-top: 70px;
+    min-height: calc(100vh - 70px);
+}
+
+/* ============================================
+   Sidebar Navigation
+   ============================================ */
+
+.sidebar {
+    width: 260px;
+    background: #16213e;
+    border-right: 1px solid #0f3460;
+    padding: 20px 0;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 14px 24px;
+    color: #a0a0b0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 15px;
+    border-left: 3px solid transparent;
+}
+
+.nav-item:hover {
+    background: rgba(233, 69, 96, 0.1);
+    color: #e94560;
+}
+
+.nav-item.active {
+    background: rgba(233, 69, 96, 0.15);
+    color: #e94560;
+    border-left-color: #e94560;
+}
+
+.nav-icon {
+    margin-right: 12px;
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+/* ============================================
+   Content Panel (Right Side)
+   ============================================ */
+
+.content-panel {
+    flex: 1;
+    margin-left: 260px;
+    padding: 30px 40px;
+    background: #1a1a2e;
+}
+
+.component-section {
+    display: none;
+}
+
+.component-section.active {
+    display: block;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e94560;
+}
+
+/* ============================================
+   Component Cards
+   ============================================ */
+
+.component-card {
+    background: #16213e;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    border: 1px solid #0f3460;
+}
+
+.component-card h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #e0e0e0;
+    padding: 16px 20px;
+    background: rgba(15, 52, 96, 0.5);
+    border-bottom: 1px solid #0f3460;
+    margin: 0;
+}
+
+.component-preview {
+    padding: 30px;
+    background: #ece9d8;
+    border-bottom: 1px solid #0f3460;
+}
+
+/* ============================================
+   Code Block Styles
+   ============================================ */
+
+.code-block {
+    background: #0d1117;
+}
+
+.code-tabs {
+    display: flex;
+    background: #161b22;
+    border-bottom: 1px solid #30363d;
+}
+
+.code-tab {
+    padding: 10px 20px;
+    background: transparent;
+    border: none;
+    color: #8b949e;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+.code-tab:hover {
+    color: #e94560;
+}
+
+.code-tab.active {
+    color: #e94560;
+    background: #0d1117;
+    border-bottom: 2px solid #e94560;
+}
+
+.code-content {
+    margin: 0;
+    padding: 20px;
+    overflow-x: auto;
+    background: #0d1117;
+}
+
+.code-content code {
+    font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #c9d1d9;
+    white-space: pre;
+}
+
+/* Legacy container styles (for backwards compatibility) */
 .container {
     max-width: 800px;
     margin: 20px auto;
     padding: 0;
-}
-
-h1 {
-    /* Windows XP window title bar style */
-    background: linear-gradient(180deg, 
-        #0058e6 0%, 
-        #3a93ff 8%, 
-        #288eff 18%, 
-        #0762e2 32%, 
-        #0562dc 50%, 
-        #0053ce 68%, 
-        #0041ad 82%, 
-        #002f86 100%);
-    color: white;
-    text-align: left;
-    padding: 6px 10px;
-    margin-bottom: 0;
-    font-size: 13px;
-    font-weight: bold;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-    border-radius: 8px 8px 0 0;
-    border: 1px solid #0054e3;
-    border-bottom: none;
 }
 
 h2 {

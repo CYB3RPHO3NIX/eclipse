@@ -3,165 +3,580 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eclipse - UI Controls</title>
+    <title>Eclipse Framework - UI Components</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Eclipse UI Controls</h1>
+    <header class="main-header">
+        <h1>eclipse framework</h1>
+    </header>
+    
+    <div class="app-layout">
+        <nav class="sidebar">
+            <ul class="nav-menu">
+                <li class="nav-item active" data-section="buttons" role="button" tabindex="0" aria-label="View Buttons components">
+                    <span class="nav-icon" aria-hidden="true">◼</span>
+                    Buttons
+                </li>
+                <li class="nav-item" data-section="form-inputs" role="button" tabindex="0" aria-label="View Form Inputs components">
+                    <span class="nav-icon" aria-hidden="true">☐</span>
+                    Form Inputs
+                </li>
+                <li class="nav-item" data-section="checkboxes" role="button" tabindex="0" aria-label="View Checkboxes components">
+                    <span class="nav-icon" aria-hidden="true">☑</span>
+                    Checkboxes
+                </li>
+                <li class="nav-item" data-section="radio-buttons" role="button" tabindex="0" aria-label="View Radio Buttons components">
+                    <span class="nav-icon" aria-hidden="true">◉</span>
+                    Radio Buttons
+                </li>
+            </ul>
+        </nav>
         
-        <section class="button-section">
-            <h2>Primary Buttons</h2>
-            <button class="btn btn-primary">Primary</button>
-            <button class="btn btn-primary" disabled>Disabled</button>
-        </section>
-
-        <section class="button-section">
-            <h2>Secondary Buttons</h2>
-            <button class="btn btn-secondary">Secondary</button>
-            <button class="btn btn-secondary" disabled>Disabled</button>
-        </section>
-
-        <section class="button-section">
-            <h2>Success Buttons</h2>
-            <button class="btn btn-success">Success</button>
-            <button class="btn btn-success" disabled>Disabled</button>
-        </section>
-
-        <section class="button-section">
-            <h2>Danger Buttons</h2>
-            <button class="btn btn-danger">Danger</button>
-            <button class="btn btn-danger" disabled>Disabled</button>
-        </section>
-
-        <section class="button-section">
-            <h2>Warning Buttons</h2>
-            <button class="btn btn-warning">Warning</button>
-            <button class="btn btn-warning" disabled>Disabled</button>
-        </section>
-
-        <section class="button-section">
-            <h2>Button Sizes</h2>
-            <button class="btn btn-primary btn-sm">Small</button>
-            <button class="btn btn-primary">Medium</button>
-            <button class="btn btn-primary btn-lg">Large</button>
-        </section>
-
-        <section class="button-section">
-            <h2>Outline Buttons</h2>
-            <button class="btn btn-outline-primary">Primary</button>
-            <button class="btn btn-outline-secondary">Secondary</button>
-            <button class="btn btn-outline-success">Success</button>
-            <button class="btn btn-outline-danger">Danger</button>
-            <button class="btn btn-outline-warning">Warning</button>
-        </section>
-
-        <section class="form-section">
-            <h2>TextBox (Input)</h2>
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" class="textbox" placeholder="Enter username">
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="text" id="email" class="textbox" value="user@example.com">
-            </div>
-            <div class="form-group">
-                <label for="disabled-input">Disabled:</label>
-                <input type="text" id="disabled-input" class="textbox" value="Cannot edit" disabled>
-            </div>
-        </section>
-
-        <section class="form-section">
-            <h2>TextBox Sizes</h2>
-            <div class="form-group">
-                <input type="text" class="textbox textbox-sm" placeholder="Small">
-            </div>
-            <div class="form-group">
-                <input type="text" class="textbox" placeholder="Medium (Default)">
-            </div>
-            <div class="form-group">
-                <input type="text" class="textbox textbox-lg" placeholder="Large">
-            </div>
-        </section>
-
-        <section class="form-section">
-            <h2>TextArea</h2>
-            <div class="form-group">
-                <label for="comments">Comments:</label>
-                <textarea id="comments" class="textarea" placeholder="Enter your comments here..."></textarea>
-            </div>
-            <div class="form-group">
-                <label for="disabled-textarea">Disabled:</label>
-                <textarea id="disabled-textarea" class="textarea" disabled>This textarea is disabled.</textarea>
-            </div>
-        </section>
-
-        <section class="form-section">
-            <h2>Checkboxes</h2>
-            <div class="form-group">
-                <label class="checkbox-wrapper">
-                    <input type="checkbox" checked>
-                    <span class="checkbox"></span>
-                    <span class="checkbox-label">Option 1 (checked)</span>
-                </label>
-                <label class="checkbox-wrapper">
-                    <input type="checkbox">
-                    <span class="checkbox"></span>
-                    <span class="checkbox-label">Option 2</span>
-                </label>
-                <label class="checkbox-wrapper">
-                    <input type="checkbox">
-                    <span class="checkbox"></span>
-                    <span class="checkbox-label">Option 3</span>
-                </label>
-            </div>
-            <div class="form-group">
-                <label class="checkbox-wrapper">
-                    <input type="checkbox" disabled checked>
-                    <span class="checkbox"></span>
-                    <span class="checkbox-label">Disabled (checked)</span>
-                </label>
-                <label class="checkbox-wrapper">
-                    <input type="checkbox" disabled>
-                    <span class="checkbox"></span>
-                    <span class="checkbox-label">Disabled (unchecked)</span>
-                </label>
-            </div>
-        </section>
-
-        <section class="form-section">
-            <h2>Radio Buttons</h2>
-            <div class="form-group">
-                <label class="radio-wrapper">
-                    <input type="radio" name="option" checked>
-                    <span class="radio"></span>
-                    <span class="radio-label">Option A (selected)</span>
-                </label>
-                <label class="radio-wrapper">
-                    <input type="radio" name="option">
-                    <span class="radio"></span>
-                    <span class="radio-label">Option B</span>
-                </label>
-                <label class="radio-wrapper">
-                    <input type="radio" name="option">
-                    <span class="radio"></span>
-                    <span class="radio-label">Option C</span>
-                </label>
-            </div>
-            <div class="form-group">
-                <label class="radio-wrapper">
-                    <input type="radio" name="disabled-option" disabled checked>
-                    <span class="radio"></span>
-                    <span class="radio-label">Disabled (selected)</span>
-                </label>
-                <label class="radio-wrapper">
-                    <input type="radio" name="disabled-option" disabled>
-                    <span class="radio"></span>
-                    <span class="radio-label">Disabled (unselected)</span>
-                </label>
-            </div>
-        </section>
+        <main class="content-panel">
+            <!-- Buttons Section -->
+            <section id="buttons" class="component-section active">
+                <h2 class="section-title">Buttons</h2>
+                
+                <div class="component-card">
+                    <h3>Primary Buttons</h3>
+                    <div class="component-preview">
+                        <button class="btn btn-primary">Primary</button>
+                        <button class="btn btn-primary" disabled>Disabled</button>
+                    </div>
+                    <div class="code-block">
+                        <div class="code-tabs">
+                            <button class="code-tab active" data-lang="html">HTML</button>
+                            <button class="code-tab" data-lang="css">CSS</button>
+                        </div>
+                        <pre class="code-content html-code"><code>&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-primary" disabled&gt;Disabled&lt;/button&gt;</code></pre>
+                        <pre class="code-content css-code" style="display:none;"><code>.btn-primary {
+    background: linear-gradient(to bottom, 
+        #ffffff 0%, #d6e7fb 5%, 
+        #aed4f9 15%, #6db6f2 50%, 
+        #3c96e4 85%, #1c62ae 100%);
+    color: #000000;
+    border: 1px solid #003c74;
+}</code></pre>
+                    </div>
+                </div>
+                
+                <div class="component-card">
+                    <h3>Secondary Buttons</h3>
+                    <div class="component-preview">
+                        <button class="btn btn-secondary">Secondary</button>
+                        <button class="btn btn-secondary" disabled>Disabled</button>
+                    </div>
+                    <div class="code-block">
+                        <div class="code-tabs">
+                            <button class="code-tab active" data-lang="html">HTML</button>
+                            <button class="code-tab" data-lang="css">CSS</button>
+                        </div>
+                        <pre class="code-content html-code"><code>&lt;button class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="btn btn-secondary" disabled&gt;Disabled&lt;/button&gt;</code></pre>
+                        <pre class="code-content css-code" style="display:none;"><code>.btn-secondary {
+    background: linear-gradient(to bottom, 
+        #ffffff 0%, #f5f4ed 15%, 
+        #ece9d8 85%, #d8d4c4 100%);
+    color: #000000;
+    border: 1px solid #848484;
+}</code></pre>
+                    </div>
+                </div>
+                
+                <div class="component-card">
+                    <h3>Success Buttons</h3>
+                    <div class="component-preview">
+                        <button class="btn btn-success">Success</button>
+                        <button class="btn btn-success" disabled>Disabled</button>
+                    </div>
+                    <div class="code-block">
+                        <div class="code-tabs">
+                            <button class="code-tab active" data-lang="html">HTML</button>
+                            <button class="code-tab" data-lang="css">CSS</button>
+                        </div>
+                        <pre class="code-content html-code"><code>&lt;button class="btn btn-success"&gt;Success&lt;/button&gt;
+&lt;button class="btn btn-success" disabled&gt;Disabled&lt;/button&gt;</code></pre>
+                        <pre class="code-content css-code" style="display:none;"><code>.btn-success {
+    background: linear-gradient(to bottom, 
+        #ffffff 0%, #e5f0d5 5%, 
+        #c5e0a5 15%, #8cbf5c 50%, 
+        #5ea030 85%, #3d7a15 100%);
+    color: #000000;
+    border: 1px solid #3d7a15;
+}</code></pre>
+                    </div>
+                </div>
+                
+                <div class="component-card">
+                    <h3>Danger Buttons</h3>
+                    <div class="component-preview">
+                        <button class="btn btn-danger">Danger</button>
+                        <button class="btn btn-danger" disabled>Disabled</button>
+                    </div>
+                    <div class="code-block">
+                        <div class="code-tabs">
+                            <button class="code-tab active" data-lang="html">HTML</button>
+                            <button class="code-tab" data-lang="css">CSS</button>
+                        </div>
+                        <pre class="code-content html-code"><code>&lt;button class="btn btn-danger"&gt;Danger&lt;/button&gt;
+&lt;button class="btn btn-danger" disabled&gt;Disabled&lt;/button&gt;</code></pre>
+                        <pre class="code-content css-code" style="display:none;"><code>.btn-danger {
+    background: linear-gradient(to bottom, 
+        #ffffff 0%, #fcd5d5 5%, 
+        #f5a8a8 15%, #e86060 50%, 
+        #d42020 85%, #a01010 100%);
+    color: #000000;
+    border: 1px solid #8b0000;
+}</code></pre>
+                    </div>
+                </div>
+                
+                <div class="component-card">
+                    <h3>Warning Buttons</h3>
+                    <div class="component-preview">
+                        <button class="btn btn-warning">Warning</button>
+                        <button class="btn btn-warning" disabled>Disabled</button>
+                    </div>
+                    <div class="code-block">
+                        <div class="code-tabs">
+                            <button class="code-tab active" data-lang="html">HTML</button>
+                            <button class="code-tab" data-lang="css">CSS</button>
+                        </div>
+                        <pre class="code-content html-code"><code>&lt;button class="btn btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button class="btn btn-warning" disabled&gt;Disabled&lt;/button&gt;</code></pre>
+                        <pre class="code-content css-code" style="display:none;"><code>.btn-warning {
+    background: linear-gradient(to bottom, 
+        #ffffff 0%, #fff5d0 5%, 
+        #ffe898 15%, #ffc848 50%, 
+        #f0a018 85%, #cc7a00 100%);
+    color: #000000;
+    border: 1px solid #996600;
+}</code></pre>
+                    </div>
+                </div>
+                
+                <div class="component-card">
+                    <h3>Button Sizes</h3>
+                    <div class="component-preview">
+                        <button class="btn btn-primary btn-sm">Small</button>
+                        <button class="btn btn-primary">Medium</button>
+                        <button class="btn btn-primary btn-lg">Large</button>
+                    </div>
+                    <div class="code-block">
+                        <div class="code-tabs">
+                            <button class="code-tab active" data-lang="html">HTML</button>
+                            <button class="code-tab" data-lang="css">CSS</button>
+                        </div>
+                        <pre class="code-content html-code"><code>&lt;button class="btn btn-primary btn-sm"&gt;Small&lt;/button&gt;
+&lt;button class="btn btn-primary"&gt;Medium&lt;/button&gt;
+&lt;button class="btn btn-primary btn-lg"&gt;Large&lt;/button&gt;</code></pre>
+                        <pre class="code-content css-code" style="display:none;"><code>.btn-sm {
+    padding: 2px 10px;
+    min-width: 60px;
+    min-height: 19px;
+    font-size: 10px;
+}
+.btn-lg {
+    padding: 6px 24px;
+    min-width: 100px;
+    min-height: 28px;
+    font-size: 12px;
+}</code></pre>
+                    </div>
+                </div>
+                
+                <div class="component-card">
+                    <h3>Outline Buttons</h3>
+                    <div class="component-preview">
+                        <button class="btn btn-outline-primary">Primary</button>
+                        <button class="btn btn-outline-secondary">Secondary</button>
+                        <button class="btn btn-outline-success">Success</button>
+                        <button class="btn btn-outline-danger">Danger</button>
+                        <button class="btn btn-outline-warning">Warning</button>
+                    </div>
+                    <div class="code-block">
+                        <div class="code-tabs">
+                            <button class="code-tab active" data-lang="html">HTML</button>
+                            <button class="code-tab" data-lang="css">CSS</button>
+                        </div>
+                        <pre class="code-content html-code"><code>&lt;button class="btn btn-outline-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-outline-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="btn btn-outline-success"&gt;Success&lt;/button&gt;
+&lt;button class="btn btn-outline-danger"&gt;Danger&lt;/button&gt;
+&lt;button class="btn btn-outline-warning"&gt;Warning&lt;/button&gt;</code></pre>
+                        <pre class="code-content css-code" style="display:none;"><code>.btn-outline-primary {
+    background: #ece9d8;
+    color: #003c74;
+    border: 1px solid #003c74;
+}
+.btn-outline-secondary {
+    background: #ece9d8;
+    color: #404040;
+    border: 1px solid #848484;
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Form Inputs Section -->
+            <section id="form-inputs" class="component-section">
+                <h2 class="section-title">Form Inputs</h2>
+                
+                <div class="component-card">
+                    <h3>TextBox (Input)</h3>
+                    <div class="component-preview">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" class="textbox" placeholder="Enter username">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="text" id="email" class="textbox" value="user@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="disabled-input">Disabled:</label>
+                            <input type="text" id="disabled-input" class="textbox" value="Cannot edit" disabled>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <div class="code-tabs">
+                            <button class="code-tab active" data-lang="html">HTML</button>
+                            <button class="code-tab" data-lang="css">CSS</button>
+                        </div>
+                        <pre class="code-content html-code"><code>&lt;div class="form-group"&gt;
+    &lt;label for="username"&gt;Username:&lt;/label&gt;
+    &lt;input type="text" id="username" class="textbox" placeholder="Enter username"&gt;
+&lt;/div&gt;
+&lt;input type="text" class="textbox" value="user@example.com"&gt;
+&lt;input type="text" class="textbox" disabled value="Cannot edit"&gt;</code></pre>
+                        <pre class="code-content css-code" style="display:none;"><code>.textbox {
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 11px;
+    padding: 3px 4px;
+    min-height: 21px;
+    background: #ffffff;
+    border: 1px solid #7f9db9;
+    box-shadow: inset 1px 1px 0px #a6b5c8;
+}</code></pre>
+                    </div>
+                </div>
+                
+                <div class="component-card">
+                    <h3>TextBox Sizes</h3>
+                    <div class="component-preview">
+                        <div class="form-group">
+                            <input type="text" class="textbox textbox-sm" placeholder="Small">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="textbox" placeholder="Medium (Default)">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="textbox textbox-lg" placeholder="Large">
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <div class="code-tabs">
+                            <button class="code-tab active" data-lang="html">HTML</button>
+                            <button class="code-tab" data-lang="css">CSS</button>
+                        </div>
+                        <pre class="code-content html-code"><code>&lt;input type="text" class="textbox textbox-sm" placeholder="Small"&gt;
+&lt;input type="text" class="textbox" placeholder="Medium (Default)"&gt;
+&lt;input type="text" class="textbox textbox-lg" placeholder="Large"&gt;</code></pre>
+                        <pre class="code-content css-code" style="display:none;"><code>.textbox-sm {
+    padding: 2px 3px;
+    min-height: 18px;
+    font-size: 10px;
+}
+.textbox-lg {
+    padding: 5px 6px;
+    min-height: 26px;
+    font-size: 12px;
+}</code></pre>
+                    </div>
+                </div>
+                
+                <div class="component-card">
+                    <h3>TextArea</h3>
+                    <div class="component-preview">
+                        <div class="form-group">
+                            <label for="comments">Comments:</label>
+                            <textarea id="comments" class="textarea" placeholder="Enter your comments here..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="disabled-textarea">Disabled:</label>
+                            <textarea id="disabled-textarea" class="textarea" disabled>This textarea is disabled.</textarea>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <div class="code-tabs">
+                            <button class="code-tab active" data-lang="html">HTML</button>
+                            <button class="code-tab" data-lang="css">CSS</button>
+                        </div>
+                        <pre class="code-content html-code"><code>&lt;div class="form-group"&gt;
+    &lt;label for="comments"&gt;Comments:&lt;/label&gt;
+    &lt;textarea id="comments" class="textarea" placeholder="Enter your comments..."&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;textarea class="textarea" disabled&gt;This textarea is disabled.&lt;/textarea&gt;</code></pre>
+                        <pre class="code-content css-code" style="display:none;"><code>.textarea {
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 11px;
+    padding: 3px 4px;
+    min-height: 60px;
+    background: #ffffff;
+    border: 1px solid #7f9db9;
+    resize: vertical;
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Checkboxes Section -->
+            <section id="checkboxes" class="component-section">
+                <h2 class="section-title">Checkboxes</h2>
+                
+                <div class="component-card">
+                    <h3>Checkbox Options</h3>
+                    <div class="component-preview">
+                        <div class="form-group">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" checked>
+                                <span class="checkbox"></span>
+                                <span class="checkbox-label">Option 1 (checked)</span>
+                            </label>
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                <span class="checkbox-label">Option 2</span>
+                            </label>
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                <span class="checkbox-label">Option 3</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <div class="code-tabs">
+                            <button class="code-tab active" data-lang="html">HTML</button>
+                            <button class="code-tab" data-lang="css">CSS</button>
+                        </div>
+                        <pre class="code-content html-code"><code>&lt;label class="checkbox-wrapper"&gt;
+    &lt;input type="checkbox" checked&gt;
+    &lt;span class="checkbox"&gt;&lt;/span&gt;
+    &lt;span class="checkbox-label"&gt;Option 1&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class="checkbox-wrapper"&gt;
+    &lt;input type="checkbox"&gt;
+    &lt;span class="checkbox"&gt;&lt;/span&gt;
+    &lt;span class="checkbox-label"&gt;Option 2&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+                        <pre class="code-content css-code" style="display:none;"><code>.checkbox-wrapper {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+.checkbox {
+    width: 13px;
+    height: 13px;
+    background: #ffffff;
+    border: 1px solid #7f9db9;
+}
+.checkbox::after {
+    border: solid #21a121;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}</code></pre>
+                    </div>
+                </div>
+                
+                <div class="component-card">
+                    <h3>Disabled Checkboxes</h3>
+                    <div class="component-preview">
+                        <div class="form-group">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" disabled checked>
+                                <span class="checkbox"></span>
+                                <span class="checkbox-label">Disabled (checked)</span>
+                            </label>
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" disabled>
+                                <span class="checkbox"></span>
+                                <span class="checkbox-label">Disabled (unchecked)</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <div class="code-tabs">
+                            <button class="code-tab active" data-lang="html">HTML</button>
+                            <button class="code-tab" data-lang="css">CSS</button>
+                        </div>
+                        <pre class="code-content html-code"><code>&lt;label class="checkbox-wrapper"&gt;
+    &lt;input type="checkbox" disabled checked&gt;
+    &lt;span class="checkbox"&gt;&lt;/span&gt;
+    &lt;span class="checkbox-label"&gt;Disabled (checked)&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class="checkbox-wrapper"&gt;
+    &lt;input type="checkbox" disabled&gt;
+    &lt;span class="checkbox"&gt;&lt;/span&gt;
+    &lt;span class="checkbox-label"&gt;Disabled (unchecked)&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+                        <pre class="code-content css-code" style="display:none;"><code>.checkbox-wrapper input:disabled + .checkbox {
+    background: #ece9d8;
+    border-color: #aca899;
+    cursor: not-allowed;
+}
+.checkbox-wrapper input:disabled ~ .checkbox-label {
+    color: #aca899;
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Radio Buttons Section -->
+            <section id="radio-buttons" class="component-section">
+                <h2 class="section-title">Radio Buttons</h2>
+                
+                <div class="component-card">
+                    <h3>Radio Options</h3>
+                    <div class="component-preview">
+                        <div class="form-group">
+                            <label class="radio-wrapper">
+                                <input type="radio" name="option" checked>
+                                <span class="radio"></span>
+                                <span class="radio-label">Option A (selected)</span>
+                            </label>
+                            <label class="radio-wrapper">
+                                <input type="radio" name="option">
+                                <span class="radio"></span>
+                                <span class="radio-label">Option B</span>
+                            </label>
+                            <label class="radio-wrapper">
+                                <input type="radio" name="option">
+                                <span class="radio"></span>
+                                <span class="radio-label">Option C</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <div class="code-tabs">
+                            <button class="code-tab active" data-lang="html">HTML</button>
+                            <button class="code-tab" data-lang="css">CSS</button>
+                        </div>
+                        <pre class="code-content html-code"><code>&lt;label class="radio-wrapper"&gt;
+    &lt;input type="radio" name="option" checked&gt;
+    &lt;span class="radio"&gt;&lt;/span&gt;
+    &lt;span class="radio-label"&gt;Option A&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class="radio-wrapper"&gt;
+    &lt;input type="radio" name="option"&gt;
+    &lt;span class="radio"&gt;&lt;/span&gt;
+    &lt;span class="radio-label"&gt;Option B&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+                        <pre class="code-content css-code" style="display:none;"><code>.radio-wrapper {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+.radio {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid #7f9db9;
+}
+.radio::after {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #21a121;
+}</code></pre>
+                    </div>
+                </div>
+                
+                <div class="component-card">
+                    <h3>Disabled Radio Buttons</h3>
+                    <div class="component-preview">
+                        <div class="form-group">
+                            <label class="radio-wrapper">
+                                <input type="radio" name="disabled-option" disabled checked>
+                                <span class="radio"></span>
+                                <span class="radio-label">Disabled (selected)</span>
+                            </label>
+                            <label class="radio-wrapper">
+                                <input type="radio" name="disabled-option" disabled>
+                                <span class="radio"></span>
+                                <span class="radio-label">Disabled (unselected)</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <div class="code-tabs">
+                            <button class="code-tab active" data-lang="html">HTML</button>
+                            <button class="code-tab" data-lang="css">CSS</button>
+                        </div>
+                        <pre class="code-content html-code"><code>&lt;label class="radio-wrapper"&gt;
+    &lt;input type="radio" name="disabled-option" disabled checked&gt;
+    &lt;span class="radio"&gt;&lt;/span&gt;
+    &lt;span class="radio-label"&gt;Disabled (selected)&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class="radio-wrapper"&gt;
+    &lt;input type="radio" name="disabled-option" disabled&gt;
+    &lt;span class="radio"&gt;&lt;/span&gt;
+    &lt;span class="radio-label"&gt;Disabled (unselected)&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+                        <pre class="code-content css-code" style="display:none;"><code>.radio-wrapper input:disabled + .radio {
+    background: #ece9d8;
+    border-color: #aca899;
+    cursor: not-allowed;
+}
+.radio-wrapper input:disabled ~ .radio-label {
+    color: #aca899;
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
+    
+    <script>
+        // Navigation functionality
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function() {
+                // Remove active class from all nav items
+                document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+                // Add active class to clicked item
+                this.classList.add('active');
+                
+                // Hide all sections
+                document.querySelectorAll('.component-section').forEach(s => s.classList.remove('active'));
+                // Show target section
+                const targetSection = document.getElementById(this.dataset.section);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+            });
+        });
+        
+        // Code tab functionality
+        document.querySelectorAll('.code-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const codeBlock = this.closest('.code-block');
+                const lang = this.dataset.lang;
+                
+                // Update active tab
+                codeBlock.querySelectorAll('.code-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Show/hide code content
+                codeBlock.querySelectorAll('.code-content').forEach(c => c.style.display = 'none');
+                const targetCode = codeBlock.querySelector('.' + lang + '-code');
+                if (targetCode) {
+                    targetCode.style.display = 'block';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
