@@ -994,14 +994,14 @@ h2 {
 }
 
 .icon-grid {
-    display: grid;
+    display: grid !important;
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     gap: 10px;
-    width: 100%;
+    width: 100% !important;
 }
 
 .icon-grid-item {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     padding: 10px;
