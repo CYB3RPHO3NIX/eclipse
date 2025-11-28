@@ -7,7 +7,12 @@ A Windows XP-themed UI component library with authentic Luna visual styles.
 ```
 eclipse/
 ├── css/
-│   └── eclipse.css    # Main CSS framework file
+│   ├── eclipse.css    # Main CSS framework file
+│   └── icons.css      # FontAwesome SVG icons CSS
+├── icons/
+│   ├── solid/         # Solid style icons (1390 icons)
+│   ├── regular/       # Regular/outline style icons (163 icons)
+│   └── brands/        # Brand icons (467 icons)
 ├── index.html         # Demo/documentation page
 └── README.md
 ```
@@ -25,13 +30,15 @@ eclipse/
 - **Hover and active states** mimicking real Windows XP control behavior
 - **Tahoma font** - The classic Windows XP system font
 - **3D effects** with proper inset shadows and border styling
+- **2000+ FontAwesome Icons** - All free FontAwesome icons in SVG format
 
 ## Installation
 
-Include the CSS file in your HTML:
+Include the CSS files in your HTML:
 
 ```html
 <link rel="stylesheet" href="css/eclipse.css">
+<link rel="stylesheet" href="css/icons.css">
 ```
 
 ## Usage
@@ -68,6 +75,31 @@ Open `index.html` in your browser to see all UI control styles.
 | `.radio-label` | Label text for radio button |
 | `.form-section` | Section container for form controls |
 | `.form-group` | Group container for label and control |
+
+### Icon Classes
+
+The library includes 2000+ FontAwesome free icons in SVG format.
+
+| Class Pattern | Description |
+|---------------|-------------|
+| `.icon-{name}` | Brand icons (e.g., `icon-instagram`, `icon-facebook`) |
+| `.icon-solid-{name}` | Solid style icons (e.g., `icon-solid-user`, `icon-solid-heart`) |
+| `.icon-regular-{name}` | Regular/outline style icons (e.g., `icon-regular-user`) |
+| `.icon-outline-{name}` | Alias for regular icons (e.g., `icon-outline-user`) |
+
+#### Icon Size Classes
+
+| Class | Size |
+|-------|------|
+| `.icon-xs` | 0.75em |
+| `.icon-sm` | 0.875em |
+| `.icon-lg` | 1.25em |
+| `.icon-xl` | 1.5em |
+| `.icon-2x` | 2em |
+| `.icon-3x` | 3em |
+| `.icon-4x` | 4em |
+| `.icon-5x` | 5em |
+| `.icon-fw` | Fixed width (1.25em) |
 
 ### Examples
 
@@ -114,6 +146,31 @@ Open `index.html` in your browser to see all UI control styles.
     <span class="radio"></span>
     <span class="radio-label">Option B</span>
 </label>
+```
+
+#### Icons
+
+```html
+<!-- Brand icons -->
+<span class="icon-instagram"></span>
+<span class="icon-facebook"></span>
+<span class="icon-twitter"></span>
+
+<!-- Solid icons -->
+<span class="icon-solid-user"></span>
+<span class="icon-solid-heart"></span>
+<span class="icon-solid-star"></span>
+
+<!-- Regular/Outline icons -->
+<span class="icon-regular-user"></span>
+<span class="icon-outline-heart"></span>
+
+<!-- Icons with sizes -->
+<span class="icon-solid-star icon-xs"></span>
+<span class="icon-solid-star icon-sm"></span>
+<span class="icon-solid-star icon-lg"></span>
+<span class="icon-solid-star icon-2x"></span>
+<span class="icon-solid-star icon-3x"></span>
 ```
 
 ## Theme
