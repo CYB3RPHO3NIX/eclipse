@@ -2,6 +2,16 @@
 
 A Windows XP-themed UI component library with authentic Luna visual styles.
 
+## Directory Structure
+
+```
+eclipse/
+├── css/
+│   └── eclipse.css    # Main CSS framework file
+├── index.html         # Demo/documentation page
+└── README.md
+```
+
 ## Features
 
 - **Windows XP Luna Theme** - Authentic Windows XP visual styling with classic gradients
@@ -15,6 +25,14 @@ A Windows XP-themed UI component library with authentic Luna visual styles.
 - **Hover and active states** mimicking real Windows XP control behavior
 - **Tahoma font** - The classic Windows XP system font
 - **3D effects** with proper inset shadows and border styling
+
+## Installation
+
+Include the CSS file in your HTML:
+
+```html
+<link rel="stylesheet" href="css/eclipse.css">
+```
 
 ## Usage
 
