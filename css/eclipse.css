@@ -990,14 +990,14 @@ h2 {
 }
 
 .icon-grid-preview {
-    max-height: 500px;
-    overflow-y: auto;
+    /* Full height, no scroll constraint - display all icons in expanded grid */
 }
 
 .icon-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     gap: 10px;
+    width: 100%;
 }
 
 .icon-grid-item {
